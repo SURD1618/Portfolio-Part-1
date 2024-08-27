@@ -231,10 +231,15 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Software Developer', 'Frontend Developer', 'Java Developer'],
-          typeSpeed: 50,
+            strings: ['Software Developer', 'Frontend Developer', 'Java Developer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 1000,
+            startDelay: 500, 
+            loop: true 
         });
-      </script>
+    </script>
+
 </body>
 
 </html>
