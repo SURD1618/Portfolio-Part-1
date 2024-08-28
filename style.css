@@ -119,7 +119,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            max-width: 80vw;
+            max-width: 83vw;
             margin: auto;
         }
         
@@ -134,10 +134,12 @@
         .aboutLeft h3 {
             color: #9c97f1;
             margin-bottom: 10px;
+            font-size: 22px;
         }
         
         .aboutLeft p {
             margin-bottom: 15px;
+            font-size: 16px;
         }
         
         .aboutRight {
@@ -157,15 +159,85 @@
         }
 
         .about-image {
-            width: 120px; /* Adjust the size as needed */
+            width: 120px; 
             height: 170px;
             border-radius: 5px;
-            margin-bottom: 20px; /* Space between the image and the paragraph */
+            margin-bottom: 20px; 
           }
         
         .aboutRight p {
             line-height: 1.61;
             font-size: 16px;
+        }
+
+        /* ------------------------------------ */
+        
+        .education {
+            text-align: center;
+            margin-top: 50px;
+            padding-bottom: 70px;
+        }
+        
+        .section-title {
+            font-size: 3em;
+            font-weight: bold;
+            color: #9c97f1;
+            position: relative;
+        }
+
+        .line-mf{
+            width: 40px;
+            height: 5px;
+            background-color: #816bb4;
+            margin: 0px 746px 60px;
+        }
+        
+        .education-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .education-box {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 418px;
+            transition: transform 1s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .education-logo {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 278px;
+            margin-bottom: 20px;
+        }
+        
+        .education-logo img {
+            width: 50%;
+            height: auto;
+            transition: transform 1s ease;
+        }
+        
+        .education-box:hover .education-logo img {
+            transform: scale(1.3);  /* Zooms in the logo on hover */
+        }
+        
+        .degree {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .year {
+            font-size: 1em;
+            color: #777;
+            margin-top: 5px;
         }
         
         
