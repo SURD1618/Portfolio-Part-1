@@ -20,11 +20,20 @@
             <!-- right side menus   -->
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About me</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact me</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Services</a>
+                        <div class="dropdown-content">
+                            <a href="#education-section">Education</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#certificates">Certificates</a>
+                            <a href="#publications">Publications</a>
+                            <a href="#my-journey">My Journey</a>
+                        </div>
+                    </li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact me</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,22 +41,32 @@
     <!-- ------------------------------------------------------- M A I N  S E C T I O N ------------------------------------------------------------ -->
     <!-- ------------------------------------------------------- F I R S T  S E C T I O N ------------------------------------------------------------ -->
     <main>
-        <section class="firstSection">
+        <section class="firstSection" id="home">
             <div class="leftSection">
                 Hi! I'm <span class="textColor">Rohan</span>
                 <div>and I'm a passionate</div>
                 <span id="element"></span>
                 <div class="buttons">
-                    <button class="btn"><a href="">Download Resume</a></button>
+                    <button class="btn" onclick="openResumePopup()">Download Resume</button>
                     <button class="btn"><a href="https://github.com/SURD1618">Visit Github</a></button>
                 </div>
             </div>
             <div class="rightSection">
-                <img src="bg.png" alt="">
+                <img src="images/bg.png" alt="">
             </div>
         </section>
+        
+        <!-- Pop-up Window HTML -->
+        <div id="resumePopup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close1" onclick="closeResumePopup()">&times;</span>
+                <img src="images/resumess.png" alt="ResumeSS">
+                <a href="RohanDasResume.pdf" download="RohanDasResume.pdf" class="downloadbtn">Download</a>
+            </div>
+        </div>
+        
         <!-- ------------------------------------------------ A B O U T  M E  S E C T I O N ------------------------------------------------------------ -->
-        <section class="aboutMeSection">
+        <section class="aboutMeSection" id="about">
             <div class="aboutMeContainer">
                 <div class="aboutLeft">
                     <h3>Skills</h3>
@@ -70,7 +89,7 @@
                 </div>
                 <div class="aboutRight">
                     <h2>About me</h2>
-                    <img src="profile.jpg" alt="Rohan Das" class="about-image">
+                    <img src="images/profile.jpg" alt="Rohan Das" class="about-image">
                     <p>
                       Hello! I'm Rohan Das, a recent graduate with a Master's degree in Computer Science and Applications from Christ Deemed to be University, Bangalore. My journey in the tech world has been deeply rooted in both theoretical and practical domains, with extensive experience in software development. I am proficient in Java, React, and web development, and I have a passion for building innovative applications that solve real-world problems.
                       <br><br>
@@ -89,14 +108,14 @@
                 <div class="education-container">
                     <div class="education-box">
                         <div class="education-logo">
-                            <img src="christ.webp" alt="Christ University">
+                            <img src="images/christ.webp" alt="Christ University">
                         </div>
                         <p class="degree">Master of Computer Science and Applications</p>
                         <p class="year">2022 - 2024</p>
                     </div>
                     <div class="education-box">
                         <div class="education-logo">
-                            <img src="mit.avif" alt="Maharashtra Institute of Technology, Pune">
+                            <img src="images/mit.avif" alt="Maharashtra Institute of Technology, Pune">
                         </div>
                         <p class="degree">Bachelor of Computer Science</p>
                         <p class="year">2019 - 2022</p>
@@ -105,25 +124,25 @@
             </div>
         </section>
         <!-- ----------------------------------------------- P R O J E C T S  S E C T I O N ------------------------------------------------------------ -->
-        <section id="projects">
+        <section id="projects" >
             <h2 class="section-title">PROJECTS</h2>
             <div class="line-mf"></div>
             <div class="projects-container">
                 <div class="project-box">
                     <a href="https://github.com/SURD1618/WeatherNow-API" target="_blank">
-                        <img src="weather.png" alt="Weather App Image">
+                        <img src="images/weather.png" alt="Weather App Image">
                         <span>Weather App - API</span>
                     </a>
                 </div>
                 <div class="project-box">
                     <a href="https://github.com/SURD1618/movie-browser" target="_blank">
-                        <img src="movie.png" alt="Movie Browser Image">
+                        <img src="images/movie.png" alt="Movie Browser Image">
                         <span>Movie Browser</span>
                     </a>
                 </div>
                 <div class="project-box">
                     <a href="https://github.com/SURD1618" target="_blank">
-                        <img src="blockchain.webp" alt="Blockchain-Based Voting System Image">
+                        <img src="images/blockchain.webp" alt="Blockchain-Based Voting System Image">
                         <span>Blockchain-Based Secure Document Tracking System</span>
                     </a>
                 </div>
@@ -137,7 +156,7 @@
                 <div class="certificate-box">
                     <a href="https://www.udemy.com/certificate/UC-39753576-7dd3-4833-90be-02cbc8750552/">
                         <div class="certificate-logo">
-                            <img src="udemy.jpg" alt="Certificate 1 Image">
+                            <img src="images/udemy.jpg" alt="Certificate 1 Image">
                         </div>
                         <span>Full Stack Web Development Bootcamp</span>
                         <p>Issued: May 2024</p>
@@ -146,7 +165,7 @@
                 <div class="certificate-box">
                     <a href="https://courses.edx.org/certificates/6034419d04e34596a1b7816e84139c56?_gl=1*la4k3w*_ga*MTQ3MTMzODU0NS4xNjk3NzI2MTE3*_ga_D3KS4KMDT0*MTY5OTQyMTUzNy4zNC4xLjE2OTk0MjIwNDcuNjAuMC4w">
                         <div class="certificate-logo">
-                            <img src="edX.jpg" alt="Certificate 2 Image">
+                            <img src="images/edX.jpg" alt="Certificate 2 Image">
                         </div>
                         <span>Back-end Application Development with Node.js and Express</span>
                         <p>Issued: November 2023</p>
@@ -155,7 +174,7 @@
                 <div class="certificate-box">
                     <a href="https://www.credly.com/badges/afb0f7ec-1dae-413c-84cf-942809ca8673/linked_in_profile">
                         <div class="certificate-logo">
-                            <img src="aws.png" alt="Certificate 3 Image">
+                            <img src="images/aws.png" alt="Certificate 3 Image">
                         </div>
                         <span>AWS Academy Graduate - AWS Academy Cloud Foundations</span>
                         <p>Issued: April 2024</p>
@@ -164,7 +183,7 @@
                 <div class="certificate-box">
                     <a href="https://www.coursera.org/account/accomplishments/verify/HUE5J3EP2TPW">
                         <div class="certificate-logo">
-                            <img src="coursera.png" alt="Certificate 4 Image">
+                            <img src="images/coursera.png" alt="Certificate 4 Image">
                         </div>
                         <span>Machine Learning</span>
                         <p>Issued: April 2021</p>
@@ -173,7 +192,7 @@
                 <div class="certificate-box">
                     <a href="https://www.airtribe.live/api-development-masterclass/certificate/PS5TDHTKI1LQ">
                         <div class="certificate-logo">
-                            <img src="airt.jpg" alt="Certificate 5 Image">
+                            <img src="images/airt.jpg" alt="Certificate 5 Image">
                         </div>
                         <span>API Development using Node.js</span>
                         <p>Issued: October 2023</p>
@@ -182,7 +201,7 @@
                 <div class="certificate-box">
                     <a href="https://www.mygreatlearning.com/certificate/IDIVFTBE">
                         <div class="certificate-logo">
-                            <img src="gl.jpeg" alt="Certificate 6 Image">
+                            <img src="images/gl.jpeg" alt="Certificate 6 Image">
                         </div>
                         <span>Java Programming - Core Concepts</span>
                         <p>Issued: July 2024</p>
@@ -197,13 +216,13 @@
             <div class="publications-container">
                 <div class="publication-box" id="publication1">
                     <a>
-                        <img src="ijsrcseit.jpeg" alt="Publication Image">
-                        <span>IJSRCSEIT</span>
+                        <img src="images/ijsrcseit.jpeg" alt="Publication Image">
+                        <span>IJSRCSE</span>
                     </a>
                 </div>
                 <div class="publication-box" id="publication2">
                     <a>
-                        <img src="ijeecs.png" alt="Publication Image">
+                        <img src="images/ijeecs.png" alt="Publication Image">
                         <span>IJEECS</span>
                     </a>
                 </div>
@@ -247,73 +266,62 @@
           
         
         <!-- --------------------------------------- S K I L L S  D E V E L O P M E N T  S E C T I O N ------------------------------------------------------------ -->
-        <hr>
-        <section class="secondSection">
+        <section class="secondSection" id="my-journey">
             <span class="text-gray">What I've done so far</span>
-            <h1>Skills Development</h1>
+            <h1>SKILLS DEVELOPMENT</h1>
             <div class="experienceLine">
                 <div class="verticalLine">
-                    <img class="image-top" src="java (2).png" alt="">
+                    <img class="image-top" src="images/java (2).png" alt="">
                     <div class="title">
-                        Java Full Stack Developer (2024)
+                        Blockchain & Advanced Web Development (2024)
                     </div>
                     <div class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, quaerat harum a autem
-                        officiis impedit dicta reiciendis, ipsam sapiente neque minima voluptas sunt consectetur
-                        accusamus facilis inventore vel assumenda quas!
+                        Continued working on the blockchain project and published a research paper. Gained experience in Machine Learning, Node.js, React.js, and developed dynamic web applications. Currently deepening skills in Java, SpringBoot, JSP, Servlets, Microservices, and Hibernate.
                     </div>
                 </div>
                 <div class="verticalLine">
-                    <img class="image-top" src="java.png" alt="">
+                    <img class="image-top" src="images/java.png" alt="">
                     <div class="title">
-                        Java Developer (2023 - 2024)
+                        Artificial Intelligence & Cryptography (2023)
                     </div>
                     <div class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, quaerat harum a autem
-                        officiis impedit dicta reiciendis, ipsam sapiente neque minima voluptas sunt consectetur
-                        accusamus facilis inventore vel assumenda quas!
+                        Learned AI concepts like NLU and NLG, improved DSA knowledge, explored Computer Networks and Cryptography, and started a blockchain project. Worked with data analysis on Kaggle and explored advanced software engineering techniques.
                     </div>
                 </div>
                 <div class="verticalLine">
-                    <img class="image-top" src="react.png" alt="">
+                    <img class="image-top" src="images/react.png" alt="">
                     <div class="title">
-                        React Developer (2023)
+                        Deepened Java Knowledge and Python Basics (2022)
                     </div>
                     <div class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, quaerat harum a autem
-                        officiis impedit dicta reiciendis, ipsam sapiente neque minima voluptas sunt consectetur
-                        accusamus facilis inventore vel assumenda quas!
+                        Advanced Java knowledge focusing on JDBC and Servlet programming. Learned Data Science and Python for Data Analytics, Advanced DBMS, and worked on practical applications of Java concepts.
                     </div>
                 </div>
                 <div class="verticalLine">
-                    <img class="image-top" src="user-experience.png" alt="">
+                    <img class="image-top" src="images/user-experience.png" alt="">
                     <div class="title">
-                        Frontend Developer (2020 - 2024)
+                        Explored Web Development (2019 - 2021)
                     </div>
                     <div class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, quaerat harum a autem
-                        officiis impedit dicta reiciendis, ipsam sapiente neque minima voluptas sunt consectetur
-                        accusamus facilis inventore vel assumenda quas!
+                        Started learning HTML, CSS, JavaScript, and jQuery during undergrad. Explored DSA, SQL, and Object-Oriented Programming with C++. Began programming in Java during this time.
                     </div>
                 </div>
                 <div class="verticalLine">
-                    <img class="image-top" src="html-5.png" alt="">
+                    <img class="image-top" src="images/html-5.png" alt="">
                     <div class="title">
-                        HTML Developer (2020 - 2024)
+                        Started with C, C++, and SQL (2018)
                     </div>
                     <div class="desc">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, quaerat harum a autem
-                        officiis impedit dicta reiciendis, ipsam sapiente neque minima voluptas sunt consectetur
-                        accusamus facilis inventore vel assumenda quas!
+                        Built a strong foundation in programming with C, C++, and SQL during my 11th and 12th standard, laying the groundwork for my coding journey.
                     </div>
                 </div>
-
             </div>
         </section>
+        
     </main>
-    <!-- ---------------------------------------------------------------- M A I N  S E C T I O N  E N D------------------------------------------------------------ -->
+    <!-- --------------------------------------------------------------- M A I N  S E C T I O N  E N D------------------------------------------------------------ -->
     <!-- ---------------------------------------------------------------- F O O T E R  S E C T I O N ------------------------------------------------------------ -->
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="overlay-mf"></div>
         <div class="contact-box">
             <h2>Contact</h2>
@@ -325,7 +333,8 @@
         </div>
     </section>
     
-    
+    <button id="goUpBtn" class="go-up-btn">↑</button>
+
     <footer>
         <div class="footer-rights">
             Copyright &#169; rohansportfolio.com | All rights reserved

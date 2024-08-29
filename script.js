@@ -1,9 +1,38 @@
+function openResumePopup() {
+  document.getElementById("resumePopup").style.display = "flex";
+}
+
+function closeResumePopup() {
+  document.getElementById("resumePopup").style.display = "none";
+}
+
+
+
+window.onscroll = function () {
+  const goUpBtn = document.getElementById("goUpBtn");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    goUpBtn.style.display = "block";
+  } else {
+    goUpBtn.style.display = "none";
+  }
+};
+
+// Scroll to top when the button is clicked
+document.getElementById("goUpBtn").onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
+
 var modal = document.getElementById("publicationModal");
 var span = document.getElementsByClassName("close")[0];
 
 var publications = {
   publication1: {
-    imgSrc: "NCIIISCSIT.jpg",
+    imgSrc: "images/NCIIISCSIT.jpg",
     title: "An Answer to All the WH Questions of Cyber Security",
     url: "https://ijsrcseit.com/home/issue/view/article.php?id=CSEIT218216",
     publisher: "IJSRCSEIT Publisher",
@@ -12,7 +41,7 @@ var publications = {
       "This paper explores the significance of cybersecurity in a digital world where data safety is a growing concern. Despite investments, cybercrimes continue to rise. The paper questions whether cybersecurity is solely the government's responsibility or if citizens should also play a role. It aims to provide answers to these issues, emphasizing the shared responsibility of protecting data in an internet-dependent society.",
   },
   publication2: {
-    imgSrc: "submissionproof.png",
+    imgSrc: "images/submissionproof.png",
     title:
       "Smart Contract Based e-Voting System with Selfdestruction for Security in Blockchain",
     url: "#",
