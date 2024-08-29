@@ -81,7 +81,6 @@
             </div>
         </section>
         <!-- ---------------------------------------------------------------- E D U C A T I O N  S E C T I O N ------------------------------------------------------------ -->
-        <hr>
         <section id="education-section">
             <div class="education">
                 <h2 class="section-title">EDUCATION</h2>
@@ -104,12 +103,99 @@
                 </div>
             </div>
         </section>
-        
+        <!-- ---------------------------------------------------------------- P R O J E C T S  S E C T I O N ------------------------------------------------------------ -->
+        <section id="projects">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="line-mf"></div>
+            <div class="projects-container">
+                <div class="project-box">
+                    <a href="https://github.com/SURD1618/WeatherNow-API" target="_blank">
+                        <img src="weather.png" alt="Weather App Image">
+                        <span>Weather App - API</span>
+                    </a>
+                </div>
+                <div class="project-box">
+                    <a href="https://github.com/SURD1618/movie-browser" target="_blank">
+                        <img src="movie.png" alt="Movie Browser Image">
+                        <span>Movie Browser</span>
+                    </a>
+                </div>
+                <div class="project-box">
+                    <a href="https://github.com/SURD1618" target="_blank">
+                        <img src="blockchain.webp" alt="Blockchain-Based Voting System Image">
+                        <span>Blockchain-Based Secure Document Tracking System</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------------------------------------------- C E R T I F I C A T E S  S E C T I O N ------------------------------------------------------------ -->
+        <section id="certificates">
+            <h2 class="section-title">CERTIFICATES</h2>
+            <div class="line-mf"></div>
+            <div class="certificates-container">
+                <div class="certificate-box">
+                    <a href="https://www.udemy.com/certificate/UC-39753576-7dd3-4833-90be-02cbc8750552/">
+                        <div class="certificate-logo">
+                            <img src="udemy.jpg" alt="Certificate 1 Image">
+                        </div>
+                        <span>Full Stack Web Development Bootcamp</span>
+                        <p>Issued: May 2024</p>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <a href="https://courses.edx.org/certificates/6034419d04e34596a1b7816e84139c56?_gl=1*la4k3w*_ga*MTQ3MTMzODU0NS4xNjk3NzI2MTE3*_ga_D3KS4KMDT0*MTY5OTQyMTUzNy4zNC4xLjE2OTk0MjIwNDcuNjAuMC4w">
+                        <div class="certificate-logo">
+                            <img src="edX.jpg" alt="Certificate 2 Image">
+                        </div>
+                        <span>Back-end Application Development with Node.js and Express</span>
+                        <p>Issued: November 2023</p>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <a href="https://www.credly.com/badges/afb0f7ec-1dae-413c-84cf-942809ca8673/linked_in_profile">
+                        <div class="certificate-logo">
+                            <img src="aws.png" alt="Certificate 3 Image">
+                        </div>
+                        <span>AWS Academy Graduate - AWS Academy Cloud Foundations</span>
+                        <p>Issued: April 2024</p>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/HUE5J3EP2TPW">
+                        <div class="certificate-logo">
+                            <img src="coursera.png" alt="Certificate 4 Image">
+                        </div>
+                        <span>Machine Learning</span>
+                        <p>Issued: April 2021</p>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <a href="https://www.airtribe.live/api-development-masterclass/certificate/PS5TDHTKI1LQ">
+                        <div class="certificate-logo">
+                            <img src="airt.jpg" alt="Certificate 5 Image">
+                        </div>
+                        <span>API Development using Node.js</span>
+                        <p>Issued: October 2023</p>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <a href="https://www.mygreatlearning.com/certificate/IDIVFTBE">
+                        <div class="certificate-logo">
+                            <img src="gl.jpeg" alt="Certificate 6 Image">
+                        </div>
+                        <span>Java Programming - Core Concepts</span>
+                        <p>Issued: July 2024</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------------------------------------------- P U B L I C A T I O N S   S E C T I O N ------------------------------------------------------------ -->
+
         <!-- ---------------------------------------------------------------- P A S T  E X P  S E C T I O N ------------------------------------------------------------ -->
         <hr>
         <section class="secondSection">
             <span class="text-gray">What I've done so far</span>
-            <h1>Past Experience</h1>
+            <h1>Skills Development</h1>
             <div class="experienceLine">
                 <div class="verticalLine">
                     <img class="image-top" src="java (2).png" alt="">
@@ -220,6 +306,29 @@
             startDelay: 500,
             loop: true
         });
+
+        // Get modal elements
+        var modal = document.getElementById("publicationModal");
+        var btn = document.getElementById("publication1");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Open modal when clicking on the first publication box
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close modal when clicking on 'x'
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
     </script>
 
 </body>
