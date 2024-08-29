@@ -189,7 +189,7 @@
             width: 40px;
             height: 5px;
             background-color: #816bb4;
-            margin: 0px 746px 60px;
+            margin: 0px auto 60px;
         }
         
         .education-container {
@@ -376,7 +376,120 @@
             color: #777;
             margin-top: 5px;
         }
+
+        /* ----------------------------------- */
+        #publications{
+            padding: 50px;
+            text-align: center;
+        }
         
+        .publications-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        
+        .publication-box {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            /* margin: 20px; */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* text-align: center; */
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .publication-box a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .publication-box a > span{
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .publication-box:hover{
+            transform: scale(1.05);
+        }
+
+        .publication-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 0px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modal-content h3{
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .modal-content p{
+            font-size: 1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .modal-content p a{
+            text-decoration: none;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .publication-img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
         /* ----------------------------------- */
         .secondSection {
             max-width: 83vw;
