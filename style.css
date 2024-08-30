@@ -21,19 +21,11 @@
             background-color: rgb(16, 16, 62);
         }
 
-        /* Dropdown container */
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
-        /* Style for the dropdown button */
-        .dropbtn {
-            /* color: white;
-            text-decoration: none; */
-        }
-
-        /* Dropdown content (hidden by default) */
         .dropdown-content {
             display: none;
             position: absolute;
@@ -44,7 +36,6 @@
             z-index: 1;
         }
 
-        /* Links inside the dropdown */
         .dropdown-content a {
             color: white;
             padding: 12px 16px;
@@ -52,11 +43,9 @@
             display: block;
         }
 
-        /* Show the dropdown menu when hovering over the dropdown button */
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
 
         nav ul {
             display: flex;
@@ -610,7 +599,7 @@
             background: white;
             width: 80vw;
             height: 2px;
-            margin: 56px 0;
+            margin: 73px 0;
             display: flex;
         }
 
@@ -622,10 +611,10 @@
         }
 
         .image-top {
-            width: 25px;
+            width: 33px;
             position: relative;
-            top: -31px;
-            left: -11px;
+            top: -39px;
+            left: -16px;
         }
 
         .title {
@@ -778,7 +767,7 @@
             border: 2px solid #0077b5; 
         }
         
-
+        /* ------------------------------------- */
 
         .go-up-btn {
             position: fixed;

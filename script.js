@@ -20,7 +20,7 @@ window.onscroll = function () {
   }
 };
 
-// Scroll to top when the button is clicked
+
 document.getElementById("goUpBtn").onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
