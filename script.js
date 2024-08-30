@@ -5,9 +5,7 @@ function openResumePopup() {
 function closeResumePopup() {
   document.getElementById("resumePopup").style.display = "none";
 }
-
-
-
+// -------------------------------------------------------------------------------------------
 window.onscroll = function () {
   const goUpBtn = document.getElementById("goUpBtn");
   if (
@@ -20,13 +18,10 @@ window.onscroll = function () {
   }
 };
 
-
 document.getElementById("goUpBtn").onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
-
-
-
+// -------------------------------------------------------------------------------------------
 var modal = document.getElementById("publicationModal");
 var span = document.getElementsByClassName("close")[0];
 
@@ -72,7 +67,7 @@ document.getElementById("publication1").onclick = function () {
 document.getElementById("publication2").onclick = function () {
   openModal("publication2");
 };
-
+// -----------------------------------------------------------------------------------------
 // Close modal when clicking on 'x'
 span.onclick = function () {
   modal.style.display = "none";
@@ -84,3 +79,14 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+// ----------------------------------------------------------------------------------------
+function toggleMenu() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.toggle("active");
+}
+
+document.querySelectorAll(".verticalLine").forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});

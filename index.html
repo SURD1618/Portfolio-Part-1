@@ -9,17 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- -------------------------------------------------------- H E A D E R  S E C T I O N  O V E R ------------------------------------------------------------ -->
     <header>
         <nav>
-            <!-- left side logo   -->
-            <div class="left">Rohan's Portfolio</div>
-            <!-- right side menus   -->
-            <div class="right">
-                <ul>
+            <div class="left">Rohan's Portfolio</div> <!-- left side logo   -->
+            <div class="right"> <!-- right side menus   -->
+                <ul id="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About me</a></li>
                     <li class="dropdown">
@@ -35,6 +34,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact me</a></li>
                 </ul>
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             </div>
         </nav>
     </header>
@@ -55,7 +55,7 @@
                 <img src="images/bg.png" alt="">
             </div>
         </section>
-        
+
         <!-- Pop-up Window HTML -->
         <div id="resumePopup" class="popup" style="display: none;">
             <div class="popup-content">
@@ -64,12 +64,12 @@
                 <a href="RohanDasResume.pdf" download="RohanDasResume.pdf" class="downloadbtn">Download</a>
             </div>
         </div>
-        
+
         <!-- ------------------------------------------------ A B O U T  M E  S E C T I O N ------------------------------------------------------------ -->
         <section class="aboutMeSection" id="about">
             <div class="aboutMeContainer">
                 <div class="aboutLeft">
-                    <h3>Skills</h3>
+                    <h3>SKILLS</h3>
                     <p><strong>Programming Languages:</strong> Java, C/C++, SQL</p>
                     <p><strong>Web:</strong> HTML, CSS3, JavaScript, jQuery, Bootstrap, React, JSP, Servlets</p>
                     <!-- <p><strong>Analytics and ML:</strong> TensorFlow, NumPy, Pandas</p> -->
@@ -88,16 +88,24 @@
 
                 </div>
                 <div class="aboutRight">
-                    <h2>About me</h2>
+                    <h2>ABOUT ME</h2>
                     <img src="images/profile.jpg" alt="Rohan Das" class="about-image">
                     <p>
-                      Hello! I'm Rohan Das, a recent graduate with a Master's degree in Computer Science and Applications from Christ Deemed to be University, Bangalore. My journey in the tech world has been deeply rooted in both theoretical and practical domains, with extensive experience in software development. I am proficient in Java, React, and web development, and I have a passion for building innovative applications that solve real-world problems.
-                      <br><br>
-                      During my undergraduate studies, I worked on various projects ranging from Java-based web applications to weather data integrations, a blockchain project to secure documents and even a Chrome extension focused on email automation. Currently, I am further enhancing my skills by working on full-stack projects and exploring new technologies such as AI and cloud computing.
-                      <br><br>
-                      I am constantly seeking opportunities to learn and grow, with a focus on making meaningful contributions to the tech industry.
+                        Hello! I'm Rohan Das, a recent graduate with a Master's degree in Computer Science and
+                        Applications from Christ Deemed to be University, Bangalore. My journey in the tech world has
+                        been deeply rooted in both theoretical and practical domains, with extensive experience in
+                        software development. I am proficient in Java, React, and web development, and I have a passion
+                        for building innovative applications that solve real-world problems.
+                        <br><br>
+                        During my undergraduate studies, I worked on various projects ranging from Java-based web
+                        applications to weather data integrations, a blockchain project to secure documents and even a
+                        Chrome extension focused on email automation. Currently, I am further enhancing my skills by
+                        working on full-stack projects and exploring new technologies such as AI and cloud computing.
+                        <br><br>
+                        I am constantly seeking opportunities to learn and grow, with a focus on making meaningful
+                        contributions to the tech industry.
                     </p>
-                </div>                 
+                </div>
             </div>
         </section>
         <!-- ---------------------------------------------- E D U C A T I O N  S E C T I O N ------------------------------------------------------------ -->
@@ -124,7 +132,7 @@
             </div>
         </section>
         <!-- ----------------------------------------------- P R O J E C T S  S E C T I O N ------------------------------------------------------------ -->
-        <section id="projects" >
+        <section id="projects">
             <h2 class="section-title">PROJECTS</h2>
             <div class="line-mf"></div>
             <div class="projects-container">
@@ -163,7 +171,8 @@
                     </a>
                 </div>
                 <div class="certificate-box">
-                    <a href="https://courses.edx.org/certificates/6034419d04e34596a1b7816e84139c56?_gl=1*la4k3w*_ga*MTQ3MTMzODU0NS4xNjk3NzI2MTE3*_ga_D3KS4KMDT0*MTY5OTQyMTUzNy4zNC4xLjE2OTk0MjIwNDcuNjAuMC4w">
+                    <a
+                        href="https://courses.edx.org/certificates/6034419d04e34596a1b7816e84139c56?_gl=1*la4k3w*_ga*MTQ3MTMzODU0NS4xNjk3NzI2MTE3*_ga_D3KS4KMDT0*MTY5OTQyMTUzNy4zNC4xLjE2OTk0MjIwNDcuNjAuMC4w">
                         <div class="certificate-logo">
                             <img src="images/edX.jpg" alt="Certificate 2 Image">
                         </div>
@@ -228,43 +237,61 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Modal Structure -->
         <div id="publicationModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <img src="" alt="Publication Certificate" class="publication-img">
-                <i><h3 id="publicationTitle"></h3></i>
+                <i>
+                    <h3 id="publicationTitle"></h3>
+                </i>
                 <p><strong>URL: </strong> <a href="" id="publicationURL" target="_blank"></a></p>
                 <p><strong>Publisher: </strong> <span id="publicationPublisher"></span></p>
                 <p><strong>Published on: </strong> <span id="publicationDate"></span></p>
                 <p><strong>Description: </strong> <span id="publicationDescription"></span></p>
             </div>
         </div>
-        
+
+        <!-- ----------------------------------------------- T E S T I M O N I A L   S E C T I O N ------------------------------------------------------------ -->
+
         <section id="testimonial" class="testimonial-section">
             <div class="overlay-mf"></div>
             <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div id="testimonial-mf" class="testimonial-box">
-                    <div class="content-test">
-                      <p class="description lead">
-                        “We stand on the brink of a technological revolution that will fundamentally alter the way we live, work, and relate to one another. In its scale, scope, and complexity, the transformation will be unlike anything humankind has experienced before. The possibilities are endless, from artificial intelligence and machine learning to biotechnology and quantum computing. These advancements will not only enhance our ability to solve age-old problems like disease and hunger but will open doors to new opportunities we have yet to imagine.
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="testimonial-mf" class="testimonial-box">
+                            <div class="content-test">
+                                <p class="description lead">
+                                    “We stand on the brink of a technological revolution that will fundamentally alter
+                                    the way we live, work, and relate to one another. In its scale, scope, and
+                                    complexity, the transformation will be unlike anything humankind has experienced
+                                    before. The possibilities are endless, from artificial intelligence and machine
+                                    learning to biotechnology and quantum computing. These advancements will not only
+                                    enhance our ability to solve age-old problems like disease and hunger but will open
+                                    doors to new opportunities we have yet to imagine.
 
-                        However, this future is not guaranteed to be a utopia. It is up to us to ensure that technology serves humanity, enhances human dignity, and creates a more equitable world. With great power comes great responsibility, and the challenge before us is not just to innovate but to innovate ethically, ensuring that progress lifts everyone up.
-                        
-                        As we move forward into this brave new world, remember that it is the dreamers and the doers who will shape this future. The ones who see not just what is, but what could be. The future belongs to those who dare to take risks, to break boundaries, and to reimagine what is possible. It is our shared responsibility to ensure that this future is bright, for ourselves and for generations to come.”
-                      </p>
-                      <span class="comit"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                                    However, this future is not guaranteed to be a utopia. It is up to us to ensure that
+                                    technology serves humanity, enhances human dignity, and creates a more equitable
+                                    world. With great power comes great responsibility, and the challenge before us is
+                                    not just to innovate but to innovate ethically, ensuring that progress lifts
+                                    everyone up.
+
+                                    As we move forward into this brave new world, remember that it is the dreamers and
+                                    the doers who will shape this future. The ones who see not just what is, but what
+                                    could be. The future belongs to those who dare to take risks, to break boundaries,
+                                    and to reimagine what is possible. It is our shared responsibility to ensure that
+                                    this future is bright, for ourselves and for generations to come.”
+                                </p>
+                                <span class="comit"><i class="fa fa-quote-right" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </section>
-          
-        
+        </section>
+
+
         <!-- --------------------------------------- S K I L L S  D E V E L O P M E N T  S E C T I O N ------------------------------------------------------------ -->
         <section class="secondSection" id="my-journey">
             <span class="text-gray">What I've done so far</span>
@@ -276,7 +303,9 @@
                         Blockchain & Advanced Web Development (2024)
                     </div>
                     <div class="desc">
-                        Continued working on the blockchain project and published a research paper. Gained experience in Machine Learning, Node.js, React.js, and developed dynamic web applications. Currently deepening skills in Java, SpringBoot, JSP, Servlets, Microservices, and Hibernate.
+                        Continued working on the blockchain project and published a research paper. Gained experience in
+                        Machine Learning, Node.js, React.js, and developed dynamic web applications. Currently deepening
+                        skills in Java, SpringBoot, JSP, Servlets, Microservices, and Hibernate.
                     </div>
                 </div>
                 <div class="verticalLine">
@@ -285,7 +314,9 @@
                         Artificial Intelligence & Cryptography (2023)
                     </div>
                     <div class="desc">
-                        Learned AI concepts like NLU and NLG, improved DSA knowledge, explored Computer Networks and Cryptography, and started a blockchain project. Worked with data analysis on Kaggle and explored advanced software engineering techniques.
+                        Learned AI concepts like NLU and NLG, improved DSA knowledge, explored Computer Networks and
+                        Cryptography, and started a blockchain project. Worked with data analysis on Kaggle and explored
+                        advanced software engineering techniques.
                     </div>
                 </div>
                 <div class="verticalLine">
@@ -294,7 +325,8 @@
                         Deepened Java Knowledge and Python Basics (2022)
                     </div>
                     <div class="desc">
-                        Advanced Java knowledge focusing on JDBC and Servlet programming. Learned Data Science and Python for Data Analytics, Advanced DBMS, and worked on practical applications of Java concepts.
+                        Advanced Java knowledge focusing on JDBC and Servlet programming. Learned Data Science and
+                        Python for Data Analytics, Advanced DBMS, and worked on practical applications of Java concepts.
                     </div>
                 </div>
                 <div class="verticalLine">
@@ -303,7 +335,8 @@
                         Explored Web Development (2019 - 2021)
                     </div>
                     <div class="desc">
-                        Started learning HTML, CSS, JavaScript, and jQuery during undergrad. Explored DSA, SQL, and Object-Oriented Programming with C++. Began programming in Java during this time.
+                        Started learning HTML, CSS, JavaScript, and jQuery during undergrad. Explored DSA, SQL, and
+                        Object-Oriented Programming with C++. Began programming in Java during this time.
                     </div>
                 </div>
                 <div class="verticalLine">
@@ -312,12 +345,12 @@
                         Started with C, C++, and SQL (2018)
                     </div>
                     <div class="desc">
-                        Built a strong foundation in programming with C, C++, and SQL during my 11th and 12th standard, laying the groundwork for my coding journey.
+                        Built a strong foundation in programming with C, C++, and SQL during my 11th and 12th standard,
+                        laying the groundwork for my coding journey.
                     </div>
                 </div>
             </div>
         </section>
-        
     </main>
     <!-- --------------------------------------------------------------- M A I N  S E C T I O N  E N D------------------------------------------------------------ -->
     <!-- ---------------------------------------------------------------- F O O T E R  S E C T I O N ------------------------------------------------------------ -->
@@ -327,12 +360,13 @@
             <h2>Contact</h2>
             <p><i class="fa-solid fa-envelope" style="color:black"></i> rd488411@gmail.com</p>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/rohan-das-9080711bb/"><i class="fa-brands fa-linkedin" style="color: #000000;"></i></a>
+                <a href="https://www.linkedin.com/in/rohan-das-9080711bb/"><i class="fa-brands fa-linkedin"
+                        style="color: #000000;"></i></a>
                 <a href="https://github.com/SURD1618"><i class="fab fa-github" style="color: #000000;"></i></a>
             </div>
         </div>
     </section>
-    
+
     <button id="goUpBtn" class="go-up-btn">↑</button>
 
     <footer>
@@ -341,7 +375,7 @@
         </div>
     </footer>
     <!-- ---------------------------------------------------------------- F O O T E R  S E C T I O N  E N D S------------------------------------------------------------ -->
-    
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
@@ -357,6 +391,7 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
 
 <!-- 
